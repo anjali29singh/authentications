@@ -3,15 +3,13 @@ from django.http import JsonResponse, HttpResponse
 import requests
 import requests.compat
 
-client_id='035e6f88e0b849ac8c63'
-client_secret=  '32e3eef8ceaca3acbf8dad21c2f98d994dd81942'
 authorize_url= 'https://github.com/login/oauth/authorize'
 def github_login(request):
 
     params= {
 
        
-        'client_id':'035e6f88e0b849ac8c63',
+        'client_id':'',
         'scope':'user:email',
         'state':'random_string',
          
@@ -34,9 +32,10 @@ def github_callback(request):
 
     token_data={
 
-    'client_id':'035e6f88e0b849ac8c63',
-    'client_secret':'32e3eef8ceaca3acbf8dad21c2f98d994dd81942',
+    'client_id':"",
+    'client_secret':"",
     'code':code,
+    'scope':'user:email'
 
     }
 
@@ -75,3 +74,14 @@ def github_callback(request):
     user = user_resp.json()
     print(user)
     return HttpResponse("callback called")
+
+
+
+def logout(request):
+
+    #  clear session
+    pass
+
+    #  redirect to login page
+
+    

@@ -1,0 +1,1 @@
+Basic Authentications in Django

@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 import requests
 import requests.compat
-
 authorize_url= 'https://github.com/login/oauth/authorize'
+
 def github_login(request):
 
     params= {

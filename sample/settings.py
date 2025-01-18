@@ -120,8 +120,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTHLIB_OAUTH_CLIENTS = {
     'github':{
-        'client_id':'',
-        'client_secret':'',
+        'client_id':'035e6f88e0b849ac8c63',
+        'client_secret':'32e3eef8ceaca3acbf8dad21c2f98d994dd81942',
         'authorize_url':'https://github.com/login/oauth/authorize',
         'request_token_url':'https://github.com/oauth/request_token',
         'access_token_url':'https://github.com/login/oauth/access_token',

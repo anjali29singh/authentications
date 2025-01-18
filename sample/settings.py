@@ -5,8 +5,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-*^#e3yxa=wd&(sq-t3wb4gre-rl8%bg(w5bb4su_4#+ig_df1m'
@@ -137,3 +135,15 @@ AUTHLIB_OAUTH_CLIENTS = {
     },
     
 }
+
+REST_FRAMEWOK={
+
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ]
+
+
+}
+
+
